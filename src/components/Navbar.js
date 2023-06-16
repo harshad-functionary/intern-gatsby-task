@@ -13,7 +13,7 @@ const Navbar =({navLinks})=>{
     };
 
     return(
-        <nav className="relative flex items-center justify-between mb-8 mx-[106px]">
+        <nav className="relative flex items-center justify-between mb-8 mx-[106px] font-sans">
             <Link to="/">
                 <StaticImage
                     src="../images/Group 33.svg"

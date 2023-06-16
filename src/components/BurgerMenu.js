@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 
 const BurgerMenu=({toggleMenu})=> {
     return(
-        <div className="px-[106px] py-[81px] bg-black h-screen ">
+        <div className="px-[106px] py-[81px] bg-black h-screen font-sans">
             <div className="flex items-center justify-between mb-[126px]">
                 <StaticImage
                     src="../images/Group 46.svg"

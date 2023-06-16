@@ -20,6 +20,9 @@ module.exports = {
           '100%': { transform: 'translateX(0%)' },
         },
       },
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
+      },
   },
   plugins: [],
 }}

@@ -4,7 +4,7 @@
 
 
 html{
-    @apply my-[81px]
+    @apply mt-20 mb-10
 }
 
 @layer base {

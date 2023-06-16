@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   return (
-    <main className="">
+    <main className="font-sans">
 
       <Navbar navLinks={["Expertise","Contact"]}/>
 
@@ -68,7 +68,7 @@ const IndexPage = () => {
 
       <div class="relative flex overflow-x-hidden uppercase">
         <div class="py-2.5 animate-marquee whitespace-nowrap">
-          <span class="font-outline-1 text-7xl hover:text-red-600">
+          <span class="font-outline-1 text-7xl">
             <span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;
             <span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;
             <span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;
@@ -104,7 +104,7 @@ const IndexPage = () => {
               <span>View more</span>
               <StaticImage
                 src="../images/Vector (3).png"
-                alt="design-bg"
+                alt="arrow-for-more"
                 placeholder="none"
                 width={16}
                 layout="fixed"
@@ -133,6 +133,77 @@ const IndexPage = () => {
                     className=""
                   />
       </div>
+
+      <div className=" relative bg-black text-center">
+
+        <div className="realtive text-white flex flex-col gap-y-10 items-center pt-44 pb-32 px-[306px]">
+          <span className="text-[39px] font-light leading-[57px]">
+            Are you looking to build your brand,Reimagine your brand, Grow your business,Go to market, Engage with customers, Make an impact,
+            Clarify your message, Sell a product or Build a community?
+          </span>
+          <span className="text-lg font-light px-48">
+          Leveling up in today’s Marketing and Advertising landscape is increasingly complex. You need a specialized partner that unifies strategy & execution. 
+          We are a full service agency with the expertise and passion required to deliver results.
+          </span>
+        </div>
+
+        <div className="absolute bottom-0 left-0 w-screen ">
+          <StaticImage
+              src="../images/Vector.svg"
+              alt="design-bg"
+              placeholder="none"
+              layout="fullWidth"
+              className="w-full"
+            />
+        </div>
+
+        <div>
+          {/* neeed to position ellipsss and polygons
+           */}
+        </div>
+      </div>
+
+      <div className="flex flex-col pt-44 pb-28 items-center  bg-black text-white">
+        <h3 className="mb-16 text-5xl font-semibold">Our Clients</h3>
+        <StaticImage
+              src="../images/Group 48.svg"
+              alt="client-companies"
+              placeholder="none"
+              layout="constrained"
+              className="mb-20"
+            />
+        <span className="text-3xl font-medium flex gap-x-2.5 items-center">
+              <span>See our works</span>
+              <StaticImage
+                src="../images/Vector (3).png"
+                alt="arrow-for-more"
+                placeholder="none"
+                width={16}
+                layout="fixed"
+                className=""
+              />
+        </span>
+      </div>
+
+      <div className="bg-black text-white relative">
+        <StaticImage
+                  src="../images/Group 128.svg"
+                  alt="reel-image"
+                  placeholder="none"
+                  layout="fullWidth"
+                  className="w-full relative z-0"
+                />
+        <div className="absolute bg-gray-200 bottom-[222px] left-[658px] z-40 w-[638px] h-[388px]"></div>
+        <div className="absolute bg-black bottom-[109px] left-[223px] z-50 w-[596px] h-[320px] pl-12 pr-11 pt-12 pb-15 flex flex-col">
+           <h5 className="text-xl font-bold mb-3.5">Show Reel</h5>
+           <p className="text-base font-light mb-8">
+           Thunder storms and rain followed our tour routing throughout Europe but I'm so glad we didn't have to cancel the shows. 
+           Thank you so much for coming back to the festival in Poland after it being evacuated because of safety reasons. You saved this show!
+           </p>
+           <button className="border-solid border border-red-600 text-red-600 bg-transparent p-2 w-32 text-xl font-medium">Play Video</button>
+        </div>
+      </div>
+
 
     </main>
   )
