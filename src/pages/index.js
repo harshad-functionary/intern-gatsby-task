@@ -1,172 +1,139 @@
 import * as React from "react"
-
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-const headingAccentStyles = {
-  color: "#663399",
-}
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-}
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-}
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-}
-
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
-const descriptionStyle = {
-  color: "#232129",
-  fontSize: 14,
-  marginTop: 10,
-  marginBottom: 0,
-  lineHeight: 1.25,
-}
-
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
-}
-
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
-}
-
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/getting-started/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
+import Navbar from "../components/Navbar"
+import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
-      <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time. 😎
-      </p>
-      <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
-          <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
-            <span>
-              <a
-                style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              >
-                {link.text}
-              </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
+    <main className="">
+
+      <Navbar navLinks={["Expertise","Contact"]}/>
+
+      <div className="bg-cover bg-center flex items-center justify-center relative mx-[106px]">
+        <StaticImage
+              src="../images/Group 146.svg"
+              alt="index-image"
+              placeholder="none"
+              layout="fullWidth"
+              className="flex-auto"
+            />     
+        <div className=" w-[601px] h-[203px] bg-white absolute left-1/2 -translate-x-1/2 -translate-x-1.5 flex-auto text-center text-red-600">
+          <h2 className="text-8xl leading-20">make your brand thrive.</h2>
+        </div>
+      </div>
+
+      <div className="flex justify-center"> 
+        <StaticImage
+                src="../images/Vector (1).png"
+                alt="down-arrow"
+                placeholder="none"
+                layout="constrained"
+                className="mt-[58px] mb-[77px]"
+          />
+      </div>
+
+      <div className="mb-44 cursor-default">     
+      <div class="relative flex overflow-x-hidden uppercase">
+        <div class="py-2.5 animate-marquee whitespace-nowrap">
+          <span class="font-outline-1 text-7xl ">
+            <span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;
             </span>
-          </li>
-        ))}
-      </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+        </div>
+        <div class="absolute top-0 py-2.5 animate-marquee2 whitespace-nowrap ">
+          <span class="font-outline-1 text-7xl ">
+            <span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+
+      <div class="relative flex overflow-x-hidden uppercase">
+        <div class="py-2.5 animate-marquee whitespace-nowrap">
+          <span class="font-outline-1 text-7xl ">
+            <span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+        <div class="absolute top-0 py-2.5 animate-marquee2 whitespace-nowrap ">
+          <span class="font-outline-1 text-7xl ">
+            <span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+
+      <div class="relative flex overflow-x-hidden uppercase">
+        <div class="py-2.5 animate-marquee whitespace-nowrap">
+          <span class="font-outline-1 text-7xl hover:text-red-600">
+            <span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+        <div class="absolute top-0 py-2.5 animate-marquee2 whitespace-nowrap">
+          <span class="font-outline-1 text-7xl">
+            <span className="hover:text-red-600 ">Outdoor Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Digital Marketing</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Television Advertising</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">Print Advertising</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Event Management</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Media Buying</span>&nbsp;&nbsp;&nbsp;
+            <span className="hover:text-red-600 ">360° Ground Branding</span>&nbsp;&nbsp;&nbsp;<span className="hover:text-red-600 ">Radio Advertising</span>&nbsp;&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+      </div> 
+        
+      <div className="pt-[130px] mb-8 relative">
+        <div className="absolute top-0 left-0 w-screen ">
+          <StaticImage
+              src="../images/Group 140.svg"
+              alt="design-bg"
+              placeholder="none"
+              layout="fullWidth"
+              className="w-full"
+            />
+        </div>
+        <div className="mx-[105px] text-black relative z-10 flex gap-x-28">
+          <div className="flex flex-col basis-5/12 justify-center"> 
+            <h3 className="mb-[32px] text-6xl font-medium ">transform forward thinking ideas</h3>
+            <p className="mb-[32px] text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+               when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+            </p>
+            <span className="text-3xl font-medium flex gap-x-2.5 items-center">
+              <span>View more</span>
+              <StaticImage
+                src="../images/Vector (3).png"
+                alt="design-bg"
+                placeholder="none"
+                width={16}
+                layout="fixed"
+                className=""
+              />
+            </span>
+          </div>
+          <div>
+            <StaticImage
+                  src="../images/Group 31.png"
+                  alt="design-bg"
+                  placeholder="none"
+                  layout="fixed"
+                  className="basis-1/2"
+                />
+          </div>
+        </div>
+      </div>
+
+      <div className="h-[626px] flex items-center justify-center">
+        <StaticImage
+                    src="../images/Polygon 5.svg"
+                    alt="triangle"
+                    placeholder="none"
+                    layout="constrained"
+                    className=""
+                  />
+      </div>
+
     </main>
   )
 }
