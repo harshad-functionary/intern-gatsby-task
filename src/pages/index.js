@@ -1,5 +1,6 @@
 import * as React from "react"
 import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 import { StaticImage } from "gatsby-plugin-image"
 
 const IndexPage = () => {
@@ -204,6 +205,7 @@ const IndexPage = () => {
         </div>
       </div>
 
+      <Footer />
 
     </main>
   )
