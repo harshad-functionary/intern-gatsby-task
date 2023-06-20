@@ -29,14 +29,14 @@ const Footer = () => {
                 <Link to="/" className="border border-black  h-24  flex items-center  justify-center p-auto ">Contact</Link>
             </div>
 
-            <div className="mt-20 flex mx-[6.5rem] h-[3.7rem] items-center">
-                <div className="mr-auto">
+            <div className="mt-20 mb-[6.75rem] flex mx-[6.5rem] h-[3.7rem] items-center">
+                <div className="mr-auto flex items-center">
                     <span className="mr-6 pt-3 pb-3 border-y border-black">
                         <StaticImage
                                 src="../images/telephone-symbol-button 1.png"
                                 alt="logo"
                                 placeholder="none"
-                                layout="constrained"
+                                layout="fixed"
                                 height={34}
                                 className=""
                             />
@@ -46,17 +46,17 @@ const Footer = () => {
                             src="../images/Group.svg"
                             alt="logo"
                             placeholder="none"
-                            layout="constrained"
+                            layout="fixed"
                             height={34}
                             className=""
                         />
                     </span>
-                    <span>
+                    <span className="mr-6 py-3 border-y border-black">
                         <StaticImage
                             src="../images/46.location.png"
                             alt="logo"
                             placeholder="none"
-                            layout="constrained"
+                            layout="fixed"
                             height={34}
                             className=""
                         />
@@ -69,39 +69,41 @@ const Footer = () => {
                         layout="constrained"
                         className=""
                     />
-                <div className="ml-auto">
-                    <span className="mr-6 py-3 border-y border-black">
+                <div className="ml-auto flex items-center">
+                    <span className="ml-6 py-3 border-y border-black">
                         <StaticImage
                                 src="../images/instagram-logo 1.png"
                                 alt="logo"
                                 placeholder="none"
-                                layout="constrained"
+                                layout="fixed"
                                 height={34}
                                 className=""
                             />
                     </span>
-                    <span className="mr-6 py-3 border-y border-black">
+                    <span className="ml-6 py-3 border-y border-black">
                         <StaticImage
                             src="../images/youtube 1.svg"
                             alt="logo"
                             placeholder="none"
-                            layout="constrained"
+                            layout="fixed"
                             height={34}
                             className=""
                         />
                     </span>
-                    <span>
+                    <span className="ml-6 py-3 border-y border-black">
                         <StaticImage
                             src="../images/facebook (2) 1.svg"
                             alt="logo"
                             placeholder="none"
-                            layout="constrained"
+                            layout="fixed"
                             height={34}
                             className=""
                         />
                     </span>
                 </div>
             </div>
+
+            <span className="text-[23px] font-normal flex justify-center">&copy; Equity Plus 2023 all rights reserved.</span>
         </div>
     )
 
