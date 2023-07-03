@@ -1,110 +1,105 @@
 import React from "react";
 import {StaticImage} from "gatsby-plugin-image"
 import { Link } from "gatsby";
+import FooterLogo from "./FooterLogo";
 
 const Footer = () => {
 
     return(
-        <div>
-            <div className="py-40 flex flex-col bg-white text-black items-center text-center">
+        <footer>
+            <section className="py-40 flex flex-col bg-white text-black items-center text-center">
                 <h4 className="text-6xl font-medium mb-8 max-w-2xl">Let’s create something amazing together.</h4>
                 <span className="text-3xl font-medium flex gap-x-2.5 items-center">
-                    <span>Schedule a call</span>
+                    <p>Schedule a call</p>
                     <StaticImage
-                        src="../images/Vector (3).png"
-                        alt="arrow-for-more"
+                        src="../images/home/Vector (3).png"
+                        alt=""
                         placeholder="none"
                         width={16}
                         layout="fixed"
                         className=""
                     />
                 </span>
-            </div>
+            </section>
 
-            <div className="grid grid-cols-5 mx-[6.5rem] gap-0 text-2xl font-normal">
+            <section className="grid grid-cols-5 mx-[6.5rem] gap-0 text-2xl font-normal">
                 <Link to="/about" className="border border-black border-r-0  h-24  flex items-center  justify-center p-auto ">About</Link>
                 <Link to="/" className="border border-black border-r-0  h-24  flex items-center  justify-center p-auto ">Expertise</Link>
                 <Link to="/" className="border border-black border-r-0  h-24  flex items-center  justify-center p-auto ">Works</Link>
                 <Link to="/" className="border border-black border-r-0  h-24  flex items-center  justify-center p-auto ">Career</Link>
                 <Link to="/" className="border border-black  h-24  flex items-center  justify-center p-auto ">Contact</Link>
-            </div>
+            </section>
 
-            <div className="mt-20 mb-[6.75rem] flex mx-[6.5rem] h-[3.7rem] items-center">
+            <section className="mt-20 mb-[6.75rem] flex mx-[6.5rem] h-[3.7rem] items-center">
                 <div className="mr-auto flex items-center">
-                    <span className="mr-6 pt-3 pb-3 border-y border-black">
+                    <i className="mr-6 pt-3 pb-3 border-y border-black">
                         <StaticImage
-                                src="../images/telephone-symbol-button 1.png"
-                                alt="logo"
+                                src="../images/footer/telephone-symbol-button 1.png"
+                                alt="call us"
                                 placeholder="none"
                                 layout="fixed"
                                 height={34}
                                 className=""
                             />
-                    </span>
-                    <span className="mr-6 py-3 border-y border-black">
+                    </i>
+                    <i className="mr-6 py-3 border-y border-black">
                         <StaticImage
-                            src="../images/Group.svg"
-                            alt="logo"
+                            src="../images/footer/Group.svg"
+                            alt="mail us"
                             placeholder="none"
                             layout="fixed"
                             height={34}
                             className=""
                         />
-                    </span>
-                    <span className="mr-6 py-3 border-y border-black">
+                    </i>
+                    <i className="mr-6 py-3 border-y border-black">
                         <StaticImage
-                            src="../images/46.location.png"
-                            alt="logo"
+                            src="../images/footer/46.location.png"
+                            alt="our location on maps"
                             placeholder="none"
                             layout="fixed"
                             height={34}
                             className=""
                         />
-                    </span>
+                    </i>
                 </div>
-                <StaticImage
-                        src="../images/Group (1).svg"
-                        alt="logo"
-                        placeholder="none"
-                        layout="constrained"
-                        className=""
-                    />
+                <FooterLogo/>
                 <div className="ml-auto flex items-center">
-                    <span className="ml-6 py-3 border-y border-black">
+                    <i className="ml-6 py-3 border-y border-black">
                         <StaticImage
-                                src="../images/instagram-logo 1.png"
-                                alt="logo"
+                                src="../images/footer/instagram-logo 1.png"
+                                alt="find us in instagram"
                                 placeholder="none"
                                 layout="fixed"
                                 height={34}
                                 className=""
                             />
-                    </span>
-                    <span className="ml-6 py-3 border-y border-black">
+                    </i>
+                    <i className="ml-6 py-3 border-y border-black">
                         <StaticImage
-                            src="../images/youtube 1.svg"
-                            alt="logo"
+                            src="../images/footer/youtube 1.svg"
+                            alt="find us on youtube"
                             placeholder="none"
                             layout="fixed"
                             height={34}
                             className=""
                         />
-                    </span>
-                    <span className="ml-6 py-3 border-y border-black">
+                    </i>
+                    <i className="ml-6 py-3 border-y border-black">
                         <StaticImage
-                            src="../images/facebook (2) 1.svg"
-                            alt="logo"
+                            src="../images/footer/facebook (2) 1.svg"
+                            alt="find us in facebook"
                             placeholder="none"
                             layout="fixed"
                             height={34}
                             className=""
                         />
-                    </span>
+                    </i>
                 </div>
-            </div>
+            </section>
 
-            <span className="text-[23px] font-normal flex justify-center">&copy; Equity Plus 2023 all rights reserved.</span>
-        </div>
+            <p className="text-[23px] font-normal flex justify-center">&copy; Equity Plus 2023 all rights reserved.</p>
+        </footer>
     )
 
 }

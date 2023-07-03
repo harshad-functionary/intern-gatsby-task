@@ -1,23 +1,18 @@
 import React from "react";
 import {StaticImage} from "gatsby-plugin-image"
 import { Link } from "gatsby";
+import Logo from "./Logo";
 
 
 const BurgerMenu=({toggleMenu})=> {
     return(
-        <div className="px-[106px] py-[81px] bg-black h-screen font-sans">
-            <div className="flex items-center justify-between mb-[126px]">
-                <StaticImage
-                    src="../images/Group 46.svg"
-                    alt="logo"
-                    placeholder="none"
-                    layout="constrained"
-                    className="h-39"
-                        />
+        <nav className="px-[106px] py-[81px] bg-black h-screen font-sans">
+            <section className="flex items-center justify-between mb-[126px]">
+                <Logo fill={"white"}/>
                 <button onClick={toggleMenu} className="flex items-center gap-1 text-white focus:outline-none">
                     <span className="font-semibold text-xl loading-6">Close</span>
                     <StaticImage
-                    src="../images/Group 45.svg"
+                    src="../images/navbar/Group 45.svg"
                     alt="close-icon"
                     placeholder="none"
                     layout="constrained"
@@ -25,11 +20,11 @@ const BurgerMenu=({toggleMenu})=> {
 
                         />
                 </button>
-            </div>
+            </section>
             
-            <div className="flex items-center text-white justify-center">
+            <section className="flex items-center text-white justify-center">
                 <StaticImage
-                    src="../images/Rectangle 29.png"
+                    src="../images/navbar/Rectangle 29.png"
                     alt="toggle-image"
                     placeholder="none"
                     layout="constrained"
@@ -42,9 +37,9 @@ const BurgerMenu=({toggleMenu})=> {
                     <Link to="" className="mb-[32px] pb-[16px] border-b-2 border-gray-300">Career</Link>
                     <Link to="" className="pb-[16px] border-b-2 border-gray-300">Contact</Link>
                 </div>
-            </div>
+            </section>
 
-        </div>
+        </nav>
     )
 }
 

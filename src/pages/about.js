@@ -3,8 +3,9 @@ import Navbar from "../components/Navbar"
 
 const About = () => {
   return (
-    <div>
-      <Navbar navLinks={["About"]} />
+    <div className="font-sans pt-20 pb-10 ">
+      <Navbar navLinks={["About"]} theme={["gray-500","black"]}/>
+      
     </div>
   )
 }

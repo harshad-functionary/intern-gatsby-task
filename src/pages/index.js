@@ -2,37 +2,49 @@ import * as React from "react"
 import Navbar from "../components/Navbar"
 import Footer from "../components/Footer"
 import { StaticImage } from "gatsby-plugin-image"
+import HeroImage from "../components/HeroImage"
+import { useState } from "react"
 
 const IndexPage = () => {
+
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlayVideo = () => {
+    setPlaying(true);
+  };
+
   return (
-    <main className="font-sans">
+    <main className="font-sans pt-20 pb-10">
 
-      <Navbar navLinks={["Expertise","Contact"]}/>
+      <Navbar navLinks={["Expertise","Contact"]} theme={["black","black"]}/>
 
-      <div className="bg-cover bg-center flex items-center justify-center relative mx-[106px]">
-        <StaticImage
-              src="../images/Group 146.svg"
+      <section className="bg-cover bg-center flex items-center justify-center relative mx-[106px]">
+        {/* <StaticImage
+              src="../images/home/Group 146.svg"
               alt="index-image"
               placeholder="none"
               layout="fullWidth"
-              className="flex-auto"
-            />     
+              className="flex-auto w-full"
+            />   */}
+
+        <HeroImage className="flex-auto w-full"/>
+
         <div className=" w-[601px] h-[203px] bg-white absolute left-1/2 -translate-x-1/2 -translate-x-1.5 flex-auto text-center text-red-600">
           <h2 className="text-8xl leading-20">make your brand thrive.</h2>
         </div>
-      </div>
+      </section>
 
       <div className="flex justify-center"> 
-        <StaticImage
-                src="../images/Vector (1).png"
-                alt="down-arrow"
-                placeholder="none"
-                layout="constrained"
-                className="mt-[58px] mb-[77px]"
-          />
-      </div>
+          <StaticImage
+                  src="../images/home/Vector (1).png"
+                  alt="down-arrow"
+                  placeholder="none"
+                  layout="constrained"
+                  className="mt-[58px] mb-[77px]"
+            />
+        </div>
 
-      <div className="mb-44 cursor-default">     
+      <section className="mb-44 cursor-default">     
       <div class="relative flex overflow-x-hidden uppercase">
         <div class="py-2.5 animate-marquee whitespace-nowrap">
           <span class="font-outline-1 text-7xl ">
@@ -83,28 +95,28 @@ const IndexPage = () => {
           </span>
         </div>
       </div>
-      </div> 
+      </section> 
         
-      <div className="pt-[130px] mb-8 relative">
+      <section className="pt-[130px] mb-8 relative">
         <div className="absolute top-0 left-0 w-screen ">
           <StaticImage
-              src="../images/Group 140.svg"
+              src="../images/home/Group 140.svg"
               alt="design-bg"
               placeholder="none"
               layout="fullWidth"
               className="w-full"
             />
         </div>
-        <div className="mx-[105px] text-black relative z-10 flex gap-x-28">
+        <article className="mx-[105px] text-black relative z-10 flex gap-x-28">
           <div className="flex flex-col basis-5/12 justify-center"> 
             <h3 className="mb-[32px] text-6xl font-medium ">transform forward thinking ideas</h3>
             <p className="mb-[32px] text-xl">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
             </p>
             <span className="text-3xl font-medium flex gap-x-2.5 items-center">
-              <span>View more</span>
+              <p>View more</p>
               <StaticImage
-                src="../images/Vector (3).png"
+                src="../images/home/Vector (3).png"
                 alt="arrow-for-more"
                 placeholder="none"
                 width={16}
@@ -115,19 +127,19 @@ const IndexPage = () => {
           </div>
           <div>
             <StaticImage
-                  src="../images/Group 31.png"
+                  src="../images/home/Group 31.png"
                   alt="design-bg"
                   placeholder="none"
                   layout="fixed"
                   className="basis-1/2"
                 />
           </div>
-        </div>
-      </div>
+        </article>
+      </section>
 
       <div className="h-[626px] flex items-center justify-center">
         <StaticImage
-                    src="../images/Polygon 5.svg"
+                    src="../images/home/Polygon 5.svg"
                     alt="triangle"
                     placeholder="none"
                     layout="constrained"
@@ -150,7 +162,7 @@ const IndexPage = () => {
 
         <div className="absolute bottom-0 left-0 w-screen ">
           <StaticImage
-              src="../images/Vector.svg"
+              src="../images/home/Vector.svg"
               alt="design-bg"
               placeholder="none"
               layout="fullWidth"
@@ -167,7 +179,7 @@ const IndexPage = () => {
       <div className="flex flex-col pt-44 pb-28 items-center  bg-black text-white">
         <h3 className="mb-16 text-5xl font-semibold">Our Clients</h3>
         <StaticImage
-              src="../images/Group 48.svg"
+              src="../images/home/Group 48.svg"
               alt="client-companies"
               placeholder="none"
               layout="constrained"
@@ -176,7 +188,7 @@ const IndexPage = () => {
         <span className="text-3xl font-medium flex gap-x-2.5 items-center">
               <span>See our works</span>
               <StaticImage
-                src="../images/Vector (3).png"
+                src="../images/home/Vector (3).png"
                 alt="arrow-for-more"
                 placeholder="none"
                 width={16}
@@ -188,20 +200,34 @@ const IndexPage = () => {
 
       <div className="bg-black text-white relative">
         <StaticImage
-                  src="../images/Group 128.svg"
-                  alt="reel-image"
+                  src="../images/home/Group 128.svg"
+                  alt="reel-bg"
                   placeholder="none"
                   layout="fullWidth"
                   className="w-full relative z-0"
                 />
-        <div className="absolute bg-gray-200 bottom-[222px] left-[658px] z-40 w-[638px] h-[388px]"></div>
+        <div className="absolute bottom-[222px] left-[658px] z-40 w-[638px] h-[388px] bg-[url('/images/home/Rectangle 221.png')]">
+          {!playing && (
+            <button onClick={handlePlayVideo} className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-4 py-2">
+              Play Video
+            </button>
+          )}
+          {playing && (
+            <iframe
+              className="w-full h-full object-contain"
+              title="Youtube player"
+              sandbox="allow-same-origin allow-forms allow-popups allow-scripts allow-presentation"
+              src="https://youtube.com/embed/BKMmLqv0IXA?autoplay=1"
+            ></iframe>
+          )}
+        </div>
         <div className="absolute bg-black bottom-[109px] left-[223px] z-50 w-[596px] h-[320px] pl-12 pr-11 pt-12 pb-15 flex flex-col">
-           <h5 className="text-xl font-bold mb-3.5">Show Reel</h5>
+           <button className="text-xl font-bold mb-3.5">Show Reel</button>
            <p className="text-base font-light mb-8">
            Thunder storms and rain followed our tour routing throughout Europe but I'm so glad we didn't have to cancel the shows. 
            Thank you so much for coming back to the festival in Poland after it being evacuated because of safety reasons. You saved this show!
            </p>
-           <button className="border-solid border border-red-600 text-red-600 bg-transparent p-2 w-32 text-xl font-medium">Play Video</button>
+           <button onClick={handlePlayVideo} className="border-solid border border-red-600 text-red-600 bg-transparent p-2 w-32 text-xl font-medium">Play Video</button>
         </div>
       </div>
 
